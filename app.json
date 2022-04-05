@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-nftstore",
-    "slug": "react-native-nftstore",
+    "name": "NFTstore",
+    "slug": "NFTstore",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,17 +13,19 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nftstore.myapp",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.nftstore.myapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
