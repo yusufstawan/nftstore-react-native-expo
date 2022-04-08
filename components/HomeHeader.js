@@ -7,7 +7,7 @@ const HomeHeader = ({ onSearch }) => {
   return (
     <View
       style={{
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.back,
         padding: SIZES.font,
       }}
     >
@@ -21,12 +21,13 @@ const HomeHeader = ({ onSearch }) => {
         <Image
           source={assets.logo}
           resizeMode="contain"
-          style={{ width: 90, height: 25 }}
+          style={{ width: 50, height: 40 }}
         />
+        <Text style={{ marginLeft: -170, fontSize: 20, fontWeight: "bold" }}>NFT Store</Text>
 
         <View style={{ width: 45, height: 45 }}>
           <Image
-            source={assets.person01}
+            source={assets.profile}
             resizeMode="contain"
             style={{ width: "100%", height: "100%" }}
           />
@@ -49,7 +50,7 @@ const HomeHeader = ({ onSearch }) => {
           style={{
             fontFamily: FONTS.regular,
             fontSize: SIZES.small,
-            color: COLORS.white,
+            color: COLORS.black,
           }}
         >
           Hello {auth.currentUser?.email} 👋
@@ -59,7 +60,7 @@ const HomeHeader = ({ onSearch }) => {
           style={{
             fontFamily: FONTS.bold,
             fontSize: SIZES.large,
-            color: COLORS.white,
+            color: COLORS.black,
             marginTop: SIZES.base / 2,
           }}
         >
@@ -72,7 +73,7 @@ const HomeHeader = ({ onSearch }) => {
           style={{
             width: "100%",
             borderRadius: SIZES.font,
-            backgroundColor: COLORS.gray,
+            backgroundColor: "#DDD7B8",
             flexDirection: "row",
             alignItems: "center",
             paddingHorizontal: SIZES.font,

@@ -58,7 +58,7 @@ export const HomeBootom = ({ minWidth, fontSize, handlePress, ...props }) => {
   return (
     <TouchableOpacity
       style={{
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.white,
         padding: SIZES.small,
         borderRadius: SIZES.extraLarge,
         minWidth: minWidth,
@@ -74,7 +74,7 @@ export const HomeBootom = ({ minWidth, fontSize, handlePress, ...props }) => {
           textAlign: "center",
         }}
       >
-        Home
+        🏠
       </Text>
     </TouchableOpacity>
   );
@@ -84,7 +84,7 @@ export const AboutBootom = ({ minWidth, fontSize, handlePress, ...props }) => {
   return (
     <TouchableOpacity
       style={{
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.white,
         padding: SIZES.small,
         borderRadius: SIZES.extraLarge,
         minWidth: minWidth,
@@ -100,7 +100,7 @@ export const AboutBootom = ({ minWidth, fontSize, handlePress, ...props }) => {
           textAlign: "center",
         }}
       >
-        About
+        🙎🏼‍♂️
       </Text>
     </TouchableOpacity>
   );

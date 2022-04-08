@@ -51,7 +51,7 @@ const Home = () => {
           }}
         >
           <View
-            style={{ height: 350, backgroundColor: COLORS.primary }} />
+            style={{ height: 350, backgroundColor: COLORS.back }} />
           <View style={{ flex: 1, backgroundColor: COLORS.white }} />
         </View>
       </View>

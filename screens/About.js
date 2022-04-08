@@ -6,7 +6,7 @@ import { auth } from '../firebase';
 
 import { FocusedStatusBar } from "../components";
 import { assets, COLORS, SIZES, NFTData } from '../constants';
-import { AboutBootom, HomeBootom } from "../components";
+import { AboutBootom, HomeBootom, CircleButton } from "../components";
 import { NFTCard } from "../components";
 
 const About = () => {
@@ -24,6 +24,12 @@ const About = () => {
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
+        <CircleButton
+          imgUrl={assets.left}
+          handlePress={() => navigation.goBack()}
+          left={15}
+          marginTop={15}
+        />
         <FocusedStatusBar backgroundColor={COLORS.primary} />
         <View style={{ flex: 1 }}>
           <View
@@ -36,13 +42,13 @@ const About = () => {
               zIndex: -1,
             }}
           >
-            <View style={{ height: 350, backgroundColor: COLORS.primary }} />
+            <View style={{ height: 350, backgroundColor: COLORS.back }} />
           </View>
           <TouchableOpacity
             onPress={handleSignOut}
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Sign out</Text>
+            <Text style={styles.signOut}>Sign out</Text>
           </TouchableOpacity>
           <Image
             source={assets.profile}
@@ -107,19 +113,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: '700',
     fontSize: 16,
     alignSelf: 'center',
   },
   buttonUpload: {
     alignSelf: 'center',
-    backgroundColor: '#0782F9',
+    backgroundColor: '#001F2D',
     width: '30%',
     padding: 10,
     borderRadius: 10,
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: 50,
   },
   containerMain: {
     flex: 1,
@@ -130,6 +136,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: 'black',
     marginLeft: 20,
-    marginTop: 20,
+    marginTop: 30,
+  },
+  signOut: {
+    color: "white",
+    fontWeight: '700',
+    fontSize: 16,
+    alignSelf: 'center',
   }
 })

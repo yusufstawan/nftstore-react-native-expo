@@ -83,6 +83,7 @@ const Details = ({ route, navigation }) => {
           </React.Fragment>
         )}
       />
+
     </SafeAreaView>
   );
 };
