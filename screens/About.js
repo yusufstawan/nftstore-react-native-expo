@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Image, FlatList } from 'react-native';
 
 import { auth } from '../firebase';
 
-import { FocusedStatusBar } from "../components";
 import { assets, COLORS, SIZES, NFTData } from '../constants';
-import { AboutBootom, HomeBootom, CircleButton } from "../components";
-import { NFTCard } from "../components";
+import { AboutBootom, HomeBootom, CircleButton, FocusedStatusBar, NFTCard } from "../components";
 
 const About = () => {
   const navigation = useNavigation()

@@ -1,6 +1,7 @@
-import { useNavigation } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+
 import { auth } from '../firebase';
 
 const Login = () => {

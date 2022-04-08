@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { View, SafeAreaView, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { NFTCard, HomeHeader, FocusedStatusBar } from "../components";
+import { NFTCard, HomeHeader, FocusedStatusBar, HomeBootom, AboutBootom } from "../components";
 import { COLORS, NFTData, SIZES } from "../constants";
-import { HomeBootom, AboutBootom } from "../components";
 
 const Home = () => {
   const [nftData, setNftData] = useState(NFTData);

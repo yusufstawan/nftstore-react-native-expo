@@ -1,13 +1,13 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import Home from './screens/Home';
 import Details from './screens/Details';
 import Login from './screens/Login';
 import About from './screens/About';
 import SplashScreen from './screens/SplashScreen';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Stack = createStackNavigator();
 
