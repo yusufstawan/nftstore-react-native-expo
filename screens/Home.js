@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { View, SafeAreaView, FlatList } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { NFTCard, HomeHeader, FocusedStatusBar } from "../components";
-import { COLORS, NFTData } from "../constants";
+import { COLORS, NFTData, SIZES } from "../constants";
+import { HomeBootom, AboutBootom } from "../components";
 
 const Home = () => {
   const [nftData, setNftData] = useState(NFTData);
+  const navigation = useNavigation();
 
   const handleSearch = (value) => {
     if (value.length === 0) {
@@ -51,6 +54,26 @@ const Home = () => {
             style={{ height: 350, backgroundColor: COLORS.primary }} />
           <View style={{ flex: 1, backgroundColor: COLORS.white }} />
         </View>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: 5,
+        }}
+      >
+        <HomeBootom
+          minWidth={90}
+          fontSize={SIZES.font}
+          handlePress={() => navigation.navigate("Home")}
+        />
+        <AboutBootom
+          minWidth={90}
+          fontSize={SIZES.font}
+          handlePress={() => navigation.navigate("About")}
+        />
       </View>
     </SafeAreaView>
   );

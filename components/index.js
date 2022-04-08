@@ -1,6 +1,6 @@
 import HomeHeader from './HomeHeader';
 import NFTCard from './NFTCard';
-import { RectButton, CircleButton } from './Button';
+import { RectButton, CircleButton, HomeBootom, AboutBootom } from './Button';
 import { SubInfo, People, EndDate, EthPrice, NFTTitle } from './SubInfo';
 import DetailsBid from './DetailsBid';
 import FocusedStatusBar from './FocusStatusBar';
@@ -18,5 +18,7 @@ export {
   NFTTitle,
   DetailsBid,
   FocusedStatusBar,
-  DetailsDesc
+  DetailsDesc,
+  HomeBootom,
+  AboutBootom,
 };
