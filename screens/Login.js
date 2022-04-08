@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { auth } from '../firebase';
 
 const Login = () => {
@@ -39,10 +39,14 @@ const Login = () => {
   }
 
   return (
-    <KeyboardAvoidingView
+    <View
       style={styles.container}
       behavior="padding"
     >
+      <Image
+        style={{ height: 150, width: 150, marginBottom: 40 }}
+        source={require("../assets/logonft.png")}
+      />
       <View style={styles.inputContainer}>
         <TextInput
           placeholder='Email'
@@ -74,7 +78,7 @@ const Login = () => {
           <Text style={styles.buttonOutlineText}>Register</Text>
         </TouchableOpacity>
       </View>
-    </KeyboardAvoidingView>
+    </View>
   )
 }
 
@@ -99,21 +103,21 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
   },
   buttonContainer: {
-    width: '60%',
+    width: '40%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: 60,
   },
   button: {
     backgroundColor: '#0782F9',
     width: '100%',
-    padding: 15,
+    padding: 10,
     borderRadius: 10,
     alignItems: 'center',
   },
   buttonOutline: {
     backgroundColor: 'white',
-    marginTop: 5,
+    marginTop: 10,
     borderColor: '#0782F9',
     borderWidth: 2,
   },

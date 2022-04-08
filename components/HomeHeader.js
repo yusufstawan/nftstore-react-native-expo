@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, TextInput } from "react-native";
-
 import { COLORS, FONTS, SIZES, assets } from "../constants";
+import { auth } from '../firebase';
 
 const HomeHeader = ({ onSearch }) => {
   return (
@@ -52,7 +52,7 @@ const HomeHeader = ({ onSearch }) => {
             color: COLORS.white,
           }}
         >
-          Hello Victoria 👋
+          Hello {auth.currentUser?.email} 👋
         </Text>
 
         <Text

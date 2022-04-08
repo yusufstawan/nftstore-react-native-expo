@@ -1,5 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useFonts } from 'expo-font';
 
 import Home from './screens/Home';
@@ -7,6 +8,7 @@ import Details from './screens/Details';
 import Login from './screens/Login';
 import About from './screens/About';
 
+const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const theme = {
@@ -35,9 +37,17 @@ const App = () => {
         <Stack.Screen name='Details' component={Details} />
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='About' component={About} />
+        <Stack.Screen name="Bottom" component={Bottom} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+const Bottom = () => (
+  <Tab.Navigator>
+    <Tab.Screen name="Home" component={Home} />
+    <Tab.Screen name="About" component={About} />
+  </Tab.Navigator>
+)
 
 export default App;
